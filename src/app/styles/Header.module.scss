@@ -11,24 +11,12 @@ $font-logo:'Poppins',sans-serif;
     left:0;
     width: 100%;
     z-index:100;
-    overflow: hidden;
+    overflow: visible;
     position: fixed;
     transition: background-color 0.3s ease;
     color: white;
 }
 
-// .headerContainer {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     background: black;
-//     padding: 1rem 4rem;
-//     max-width: 1400px;
-//     box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
-//     margin: 0 auto;
-//     overflow: hidden;
-    
-// }
 
 .headerContainer {
     display: flex;
