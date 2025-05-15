@@ -1,0 +1,59 @@
+$primary-color: #ffffff;
+
+
+.card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    background: rgb(10, 10, 10);
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-8px);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+    .text {
+        padding: 1.5rem;
+        color: $primary-color;
+
+        h4{
+            font-size:1.25rem;
+            font-weight: 600;
+
+            span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-top: 0.2rem
+            }
+        }
+
+        p{
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .card {
+        flex: 0 0 70%;
+        margin-bottom: 2rem;
+
+        .text {
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

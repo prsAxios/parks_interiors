@@ -1,0 +1,35 @@
+.carousel {
+    padding: 6rem 3rem;
+    background-color: rgb(10, 10, 10);
+    color: #ffffff;
+
+    h2{
+        font-size: clamp(1rem, 6vw, 3rem);
+        font-weight: 400;
+        margin-bottom: 3rem;
+        letter-spacing: -1px;
+    }
+
+    .track {
+        display: flex;
+        gap:2.5rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 2rem;
+        padding-bottom: 2rem;
+
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        // &::-webkit-scrollbar-thumb {
+        //     background-color: red;
+        //     border-radius: 360px;
+        // }
+
+        // &::-webkit-scrollbar-track {
+        //     background: transparent;
+        // }
+        
+    }
+}

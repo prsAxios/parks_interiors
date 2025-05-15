@@ -1,0 +1,56 @@
+$primary-color: #ffffff;
+$accent-color: #D4a373;
+$font-stack: 'Helvetica Neue', sans-serif;
+$font-logo:'Poppins',sans-serif;
+
+
+.hero {
+    position : relative;
+    background-color: rgb(10, 10, 10);
+    color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-logo;
+    overflow: hidden;
+    
+}
+
+.textContainer {
+    font-size: clamp(1rem, 10vw, 7rem);
+    line-height: 1.2;
+    padding: 12rem 2rem 1rem 4rem;
+    overflow: hidden;
+}
+
+.videoContainer {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    z-index:1;
+    position: relative;
+    margin: 0 auto;
+
+    & .video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 640px) {
+    
+    .textContainer {
+        font-size: clamp(1rem, 10vw, 7rem);
+        padding: 8rem 2rem 4rem 2rem;
+    }
+
+    .videoContainer {
+        width: 50%;
+        height: 100vh;
+        margin: 0 auto;
+
+     
+    }
+
+
+}

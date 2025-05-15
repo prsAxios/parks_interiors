@@ -1,0 +1,211 @@
+$primary-color: #ffffff;
+$accent-color: #D4a373;
+$font-stack: 'Poppins', sans-serif;
+$font-logo:'Poppins',sans-serif;
+
+.header {
+    padding: 1rem 1rem;
+    background: transparent;
+    font-family: $font-stack;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index:100;
+    overflow: hidden;
+    position: fixed;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+// .headerContainer {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: black;
+//     padding: 1rem 4rem;
+//     max-width: 1400px;
+//     box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
+//     margin: 0 auto;
+//     overflow: hidden;
+    
+// }
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 1rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    // 🔥 Glass Effect Properties
+    background: rgba(0, 0, 0, 0.3); // Transparent black
+    backdrop-filter: blur(12px);   // Blur the background
+    -webkit-backdrop-filter: blur(12px); 
+  
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1); // Optional white border
+    border-radius: 1rem; // Optional rounded edges
+  }
+
+.logo {
+
+    
+    display: flex;
+    align-items: center;
+    
+
+    p {
+        font-size: clamp(1rem, 2vw, 2rem);
+        font-weight: bold;
+        color: $primary-color;
+        font-family: $font-logo;
+    }
+
+    img {
+        height: 40px;
+        width: auto;
+    }
+}
+
+.desktopNav {
+
+    display: flex;
+
+    ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+
+        li a{
+            text-decoration: none;
+            font-size: 1rem;
+            color: $primary-color;
+            transition: color 0.3s ease;
+            font-family: $font-logo;
+          
+            &:hover{
+                color:#847b7b;
+            }
+        }
+    }
+
+}
+
+    .menuButton {
+        display:none;
+        background:none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+
+    }
+
+    .menuIcon {
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 25px;
+    }
+
+    .menuIcon div {
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+
+    .mobileMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .mobileMenu.open{
+        transform: translateY(0);
+    }
+
+    .mobileMenuList {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .mobileMenuItem a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+
+        &:hover{
+            color: #847b7b;
+        }
+    }
+
+    .closeButton {
+        position:absolute;
+        top:1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .closeIcon {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+
+    .closeIcon::before,
+    .closeIcon::after {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      top: 50%;
+      left: 0;
+    }
+
+    .closeIcon::before{
+        transform: rotate(45deg);
+    }
+
+    .closeIcon::after{
+        transform: rotate(-45deg);
+    }
+
+
+
+
+@media (max-width: 768px) {
+    .headerContainer {
+        padding: 1rem 2rem;
+    }
+    
+    .desktopNav {
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+    }
+}

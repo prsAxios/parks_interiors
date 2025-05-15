@@ -1,0 +1,84 @@
+    $primary-color:#ffffff;
+    $font-stack: 'Poppins',sans-serif;
+
+    .Section {
+        font-family: $font-stack;
+        background-color: white;
+        overflow: hidden;
+
+        .container {
+            display: flex;
+            padding: 8rem 4rem 0rem 4rem;
+            gap: 2rem;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 0rem;
+                padding: 8rem 1rem 0rem 1rem;
+            }
+            
+        }
+
+        
+
+        .leftPart {
+            flex: 1;
+            padding: 0rem 2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            h1{
+                font-size: clamp(2rem, 5vw, 6rem);
+                font-weight: 500;
+                line-height: 1.2;
+            }
+        }
+
+        .rightPart {
+            flex: 1;
+            padding: 8rem 1rem;
+   
+
+    
+        
+            form {
+                display: flex;
+                flex-direction: column;
+                gap:6rem;
+
+                input, textarea {
+                    border-style: none;
+                    border-bottom: solid black 2px;
+                    font-size: 1rem;
+                    transition: all 0.3s ease;
+                    padding: 0rem 0rem 1rem 0rem;
+
+                }
+
+                textarea {
+                    resize: vertical;
+                    min-height: 120px;
+                }
+
+                input::placeholder, textarea::placeholder {
+                    font-size: 1rem;
+                    
+                }
+
+                input:focus, textarea:focus {
+                    outline: none;
+                    border-bottom: solid rgb(122, 122, 228) 2px;
+                }
+
+            
+
+                button {
+                    align-self: flex-start;
+                }
+            
+            }
+        }
+    }

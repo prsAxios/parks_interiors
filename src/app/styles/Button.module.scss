@@ -1,0 +1,62 @@
+$primary-color : #ffffff;
+$white : #ffffff;
+$black : #000000;
+
+.button {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 1rem;
+    border: solid 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    border-radius: 360px;
+}
+
+.primary {
+    background-color: $primary-color;
+    color: black;
+
+    &:hover {
+       
+        color: white;
+        transition: all 0.5s ease-in-out;
+        background-color: lighten($black, 10%);
+        
+    }
+}
+
+.secondary {
+    background-color: black;
+    color: white;
+    
+
+    &:hover {
+        background-color: lighten($white, 10%);
+        color: black;
+        transition: all 0.5s ease-in-out    ;
+    }
+}
+
+.outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+
+    &:hover {
+        background-color: lighten($white, 10%);
+        color: black;
+        transition: all 0.5s ease-in-out    ;
+    }
+}
+
+.sm {
+    font-size: 0.8rem;
+}
+
+.md {
+    font-size: 1.2rem;
+}
+
+.lg{
+    font-size: 1.2rem;
+}
