@@ -4,7 +4,7 @@ export default function DesignServices() {
   return (
     <section className={styles.section}>
       <div>
-        <img src="/designImage.jpg" alt="designImage" />
+        <img src="/designImage.jpg" alt="designImage" draggable="false" />
       </div>
       <div className={styles.textContainer}>
         <p>PARKS INTERIORS</p>

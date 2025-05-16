@@ -38,12 +38,12 @@ const Hero = () => {
 
   return (
     <div>
-        <div className={styles.hero}>
+      <div className={styles.hero}>
         <div className={styles.textContainer}>
           <p>Design and build what others only imagine</p>
         </div>
         <div className={styles.videoContainer} ref={videoRef}>
-          <video className={styles.video} autoPlay muted loop>
+          <video className={styles.video} autoPlay muted loop draggable="false" >
             <source src="/videos/Hero.mp4" />
           </video>
         </div>
